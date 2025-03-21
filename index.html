@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир мотоциклов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Мир мотоциклов</h1>
+            <nav>
+                <button onclick="showSection('history')">История</button>
+                <button onclick="showSection('brands')">Популярные марки</button>
+                <button onclick="showSection('models')">Популярные модели</button>
+                <button id="theme-toggle" class="hidden" onclick="resetTheme()">Светлая тема</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="history" class="content active">
+                <h2>История мотоциклов</h2>
+                <p>Мотоциклы появились в конце 19 века как результат развития велосипедов и двигателей внутреннего сгорания. Первые модели были примитивными, но со временем они стали мощнее, быстрее и комфортнее.</p>
+                <img src="image/H.jpg" alt="История мотоциклов" class="section-image">
+            </section>
+
+            <section id="brands" class="content">
+                <h2>Популярные марки</h2>
+                <div class="brands-grid">
+                    <div class="brand-card" onclick="applyBrandTheme('harley')">
+                        <img src="image/HD.jpg" alt="Harley-Davidson">
+                        <p>Harley-Davidson</p>
+                    </div>
+                    <div class="brand-card" onclick="applyBrandTheme('honda')">
+                        <img src="image/Ho.webp" alt="Honda">
+                        <p>Honda</p>
+                    </div>
+                    <div class="brand-card" onclick="applyBrandTheme('yamaha')">
+                        <img src="image/Y.jpg" alt="Yamaha">
+                        <p>Yamaha</p>
+                    </div>
+                </div>
+                <div id="brand-info" class="brand-info"></div>
+            </section>
+
+            <section id="models" class="content">
+                <h2>Популярные модели</h2>
+                <div class="models-list">
+                    <div class="model-card">
+                        <img src="image/S.png" alt="Harley-Davidson Sportster">
+                        <h3>Harley-Davidson Sportster</h3>
+                        <p>Классический круизер с мощным двигателем.</p>
+                    </div>
+                    <div class="model-card">
+                        <img src="image/H6.webp" alt="Honda CBR600RR">
+                        <h3>Honda CBR600RR</h3>
+                        <p>Легендарный спортивный мотоцикл для профессионалов.</p>
+                    </div>
+                    <div class="model-card">
+                        <img src="image/YY.jpg" alt="Yamaha YZF-R1">
+                        <h3>Yamaha YZF-R1</h3>
+                        <p>Спортивный мотоцикл для треков и скоростных дорог.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 Мир мотоциклов. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
